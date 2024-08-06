@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    text-align: justify;
+}
+
+#ways {
+    top:4rem;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 3rem;
+}
+
+.ways_back {
+    object-fit: cover;
+    filter: brightness(20%);
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 400%;
+    top: 0;
+    bottom: 0;
+}
+
+.hed {
+    text-transform: uppercase;
+    color: #40ff00;
+    font-weight: 600;
+    font-family: "Belanosima", "sans-serif";
+    font-size: 2.5rem;
+    position: relative;
+    top: 3rem;
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    /* Add margin to the bottom */
+}
+
+.paragraph {
+    width: 90%;
+    max-width: 76rem;
+    background-color: #d9d9d917;
+    border-radius: 0.7rem;
+    position: relative;
+    margin: 5rem auto 3rem;
+    /* Adjust top and bottom margin */
+    padding: 1.5rem;
+    /* Increase padding */
+    color: #d7d7d7eb;
+    font-size: 0.9rem;
+    font-family: "poppins", "sans-serif";
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* Increase gap */
+}
+
+.heading {
+    text-transform: uppercase;
+    color: #23f423;
+    font-weight: 700;
+    font-family: "poppins", "sans-serif";
+    font-size: 1.3rem;
+}
+
+.subheading {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+    .hed {
+        font-size: 2rem;
+        top: 2rem;
+    }
+
+    .paragraph {
+        margin-top: 4rem;
+        font-size: 0.8rem;
+    }
+
+    .heading {
+        font-size: 1.1rem;
+    }
+
+    .subheading {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hed {
+        font-size: 1.5rem;
+        top: 1.5rem;
+    }
+
+    .paragraph {
+        margin-top: 3rem;
+        font-size: 0.7rem;
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 1rem;
+    }
+
+    .subheading {
+        font-size: 0.9rem;
+    }
+}
+.header {
+    height: 4rem;
+    background-color: #071004;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo1 {
+    height: 3rem;
+}
+
+.logoname {
+    width: 8rem;
+    margin-bottom: 0.7rem;
+}
+
+ul {
+    display: flex;
+    background-color: #071004;
+}
+
+li {
+    list-style-type: none;
+    background-color: #071004;
+    margin-right: 5rem;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #acb8a5;
+    font-family: "poppins", "sans-serif";
+}
+
+a:hover {
+    color: #f0f6ec;
+}
+/* menu button */
+#menu-btn {
+    visibility: hidden;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    color: #acb8a5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid transparent;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    position: fixed;
+}
+#menu-btn ion-icon {
+    font-size: 2rem;
+}
+
+#menu-btn:hover {
+    color: #f0f6ec;
+    border: 3px solid white;
+}
+
+
+@media screen and (max-width: 895px) {
+    .links {
+        background-color: #071004;
+        z-index: 10;
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 82%;
+        height: 35vh;
+        background-color: transparent;
+        top: 60px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+
+    .links li {
+        margin: 0.2rem 0;
+        padding: 0.2rem 0rem;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links a {
+        display: block;
+        padding: 0.2rem 0;
+        font-size: 1.2rem;
+    }
+
+    #menu-btn {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        top: 1rem;
+        right: 1.9rem;
+        z-index: 800;
+    }
+
+    /* Toggle the menu */
+    .links.active {
+        right: 0;
+    }
+}
